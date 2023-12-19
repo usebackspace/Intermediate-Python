@@ -6,6 +6,8 @@ class Circle:
 
     def calculate_area(self):
         return self.pi * self.radius * self.radius
+        # return Circle.pi * self.radius * self.radius
+    
 
 Circle.pi=30       # CLass Variable are access using class_name.variable_name
                    # Value of class variable is common for all object 

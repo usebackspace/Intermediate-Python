@@ -1,5 +1,5 @@
 class Car:
-    def __init__(self, make, model, year, color, fuel_type, is_running=True, speed=0):
+    def __init__(zself, make, model, year, color, fuel_type, is_running=True, speed=0):
         self.make = make                        # Instance Attribute of a class
         self.model = model
         self.year = year
