@@ -1,44 +1,35 @@
 class Vehicle:                      # Parent class or Base Class or Super Classs
-    speed = 0
     
-    def __init__(self):                             # Without Argument
-        print('Which car do you have to race ?')
-
-    # def __init__(self,car):                       # with Argument
-    #     self.car = car
-    #     print('Which car do you have to race ?')
-    #     print(f'I have {self.car}')
+    def __init__(self):                           
+        print('This is a vehicle class Constructor ')
 
     def car_info(self):
         print(f"Jaquar F-type  2020 edititon")
 
-    @classmethod
-    def accelerate(cls, speed_increment):
-        cls.speed += speed_increment
-        print(f"Current speed is: {cls.speed} km/h.")
-
-    @staticmethod
-    def rtr():
-        print(f"Ready To Race ")
-
-    
+ 
 class Car(Vehicle):                 # Child class or Derived class or Sub Class
     
+    # def __init__(self):
+    #     print('This is Car class Constructor')
+
     def start_engine(self):
-        print(f'Press Start Button to start the car')               # Without Argument
-        # print(f'Press Start Button to start {self.car}')         # with Argument
-
-
+        print(f'Press Start Button to start the car')              
+        
     def honk(self):
         print(f"Press honk button to honks loudly.")
 
 # Creating an instance of the Car class
-jaquar = Car()                   # Without Argument
-# jaquar = Car('Ford GT-40')     # With Argument
+jaquar = Car()                
 
 # Accessing methods
 jaquar.start_engine()
 # jaquar.honk()
 # jaquar.car_info()
-# jaquar.accelerate(50)
-# jaquar.rtr()
+
+# 1. If define class constructor in parent class and create a Instance of child class, class constructor of 
+#    PARENT class get called automatically.
+
+# 2. If define class constructor in  both parent class and child class and create a Instance of child class,
+#    class constructor of CHILD class get called automatically.
+
+# 3. First preference will be always  child class constructor

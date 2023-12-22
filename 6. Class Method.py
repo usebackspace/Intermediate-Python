@@ -4,12 +4,10 @@ class Car:
     def __init__(self, make, model, year):
         self.make = make        # Instance variable
         self.model = model
-        self.year = year
-        
+        self.year = year 
 
     def accelerate(self, speed_increase):  # Instance Method
         self.speed += speed_increase
-
 
     def display_speed(self):
         print(f"The current speed of the {self.year} {self.make} {self.model} is {self.speed} mph.")
@@ -27,6 +25,8 @@ print()
 
 print(my_car1.speed)
 
+#==============================================================================================================
+
 print('----- Using Class Method -----')
 
 class Car:
@@ -41,8 +41,6 @@ class Car:
         cls.speed += speed_increase
         # print(cls.speed)
         #print(self.speed)           # 3 P of D
-
-
 
     def display_speed(self):
         print(f"The current speed of the {self.year} {self.make} {self.model} is {self.speed} mph.")

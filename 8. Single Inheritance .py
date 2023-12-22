@@ -1,19 +1,11 @@
-class Vehicle:                      # Parent class or Base Class or Super Classs
-    speed = 0
+class Vehicle:                      # Parent class or Base Class or Super Class
 
     def car_info(self):
         print(f"Jaquar F-type  2020 edititon")
 
-    @classmethod
-    def accelerate(cls, speed_increment):
-        cls.speed += speed_increment
-        print(f"Current speed is: {cls.speed} km/h.")
-
-    @staticmethod
-    def rtr():
+    def rtr(self):
         print(f"Ready To Race ")
 
-    
 class Car(Vehicle):                 # Child class or Derived class or Sub Class
     
     def start_engine(self):
@@ -22,12 +14,14 @@ class Car(Vehicle):                 # Child class or Derived class or Sub Class
     def honk(self):
         print(f"Press honk button to honks loudly.")
 
-# Creating an instance of the Car class
+# Creating an instance of the Car class ( Child Class)
 jaquar = Car()
-
-# Accessing methods
 jaquar.start_engine()
 # jaquar.honk()
 # jaquar.car_info()
-# jaquar.accelerate(50)
-# jaquar.rtr()
+jaquar.rtr()
+
+# Parent Class object cannot access attributes and method child class 
+# Creating an instance of the Vehicle class ( Parent Class)
+veh = Vehicle()
+# veh.honk()
