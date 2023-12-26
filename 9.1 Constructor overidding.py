@@ -36,7 +36,7 @@ jaquar = Car()
 # jaquar = Car('Ford',6000000)                
 
 # Accessing methods
-# jaquar.start_engine()
+jaquar.start_engine()
 # jaquar.honk()
 # jaquar.car_info()
 
