@@ -14,3 +14,4 @@ class Child(Dad,Mom):
         print('Child class Constructor')
 
 ch = Child()
+

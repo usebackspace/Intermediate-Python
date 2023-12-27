@@ -1,3 +1,32 @@
+class parent:                                # Parent class or Base Class or Super Class
+    def __init__(self):
+        print("parent class Constructor")
+
+    def parent_property(self):
+        print('parent''s property')
+
+class Child(parent):                          # Child class or Derived class or Sub Class
+    def __init__(self):
+        print('Child class Constructor')
+    
+    def child_property(self):
+        print('Child''s property')
+
+# Creating an instance of the Child class ( Child Class)
+ch = Child()     
+ch.child_property()
+ch.parent_property()
+
+# Creating an instance of the parent class ( Parent Class)
+parent=parent()
+parent.parent_property()
+# parent.child_property()    # Parent class cannot access child class method
+
+print()
+
+
+#===========================================================================================================
+
 class Vehicle:                      # Parent class or Base Class or Super Class
 
     def car_info(self):

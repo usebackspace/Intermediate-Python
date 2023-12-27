@@ -1,3 +1,45 @@
+class Parent:                                # Parent class or Base Class or Super Class
+    def __init__(self):
+        print("parent class Constructor")
+
+    def parent_property(self):
+        print('parent''s property')
+
+class Child(Parent):                          # Child class or Derived class or Sub Class
+    def __init__(self):
+        super().__init__()
+        print('Child class Constructor')
+    
+    def child_property(self):
+        print('Child''s property')
+
+class GrandChild(Child):                         
+    def __init__(self):
+        super().__init__()
+        print('GrandChild class Constructor')
+    
+    def grandchild_property(self):
+        print('GrandChild''s property')
+
+# Creating an instance of the GrandChild class (Child Class)
+gc = GrandChild()     
+gc.grandchild_property()
+gc.child_property()
+gc.parent_property()
+
+# Creating an instance of the Child class (Child Class)
+c=Child()
+c.child_property()
+# c.grandchild_property()
+
+# Creating an instance of the parent class (Parent Class)
+parent=Parent()
+parent.parent_property()
+# parent.child_property()    # Parent class cannot access child class method
+
+print()
+
+#========================================================================================================
 # Base class
 class Vehicle:
     def __init__(self, brand, model):
@@ -44,14 +86,13 @@ sports_car.display_info()
 # Accessing sportscar method
 sports_car.sportscar()
 
-# Accessing car method through Grand Child class
+# Accessing car method through Grand Child class (sportscar)
 sports_car.car()
 
-# Accessing vehicle method through Grand Child class
+# Accessing vehicle method through Grand Child class (sportscar)
 sports_car.car()
 
 #===================================================================================================
-
 
 # Same Inheritance concept apply here also :
 # 1. Grand child can access members of child class and parent class.
