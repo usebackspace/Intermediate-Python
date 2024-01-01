@@ -3,10 +3,10 @@ class Car:
         self.make = make
         self.model = model
 
-    def get_make(self,brand):
+    def set_make(self,brand):
         self.make = brand 
 
-    def get_model(self,mod):
+    def set_model(self,mod):
         self.model = mod
     
 
