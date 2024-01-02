@@ -5,8 +5,6 @@ class Dog:
 class Cat:
     def speak(self):
         return "Meow!"
-    def run(self):
-        return "Fast"
 
 class Duck:
     def run(self):
@@ -14,13 +12,13 @@ class Duck:
 
 def make_sound(animal):
 
-    animal.speak()
+    print(animal.speak())
 
     # if hasattr(animal,'speak'):
     #     print(animal.speak())
     
     # if hasattr(animal,'run'):
-    #     return animal.run()
+    #     print(animal.run())
 
 # Instances of different classes
 dog = Dog()
