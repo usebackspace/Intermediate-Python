@@ -1,20 +1,35 @@
-# main_program.py
-from MathOperation.Add.addition import add
-from MathOperation.Sub.subtraction import subtract
-from MathOperation.Mul.multiplication import multiply
-from MathOperation.Div.division import divide
+# Import PackageName.moduleName
 
-def main():
-    x = 10
-    y = 2
+print('---- Import PackageName.moduleName ----')
 
-    result_add = add(x, y)
-    result_subtract = subtract(x, y)
-    result_multiply = multiply(x, y)
-    result_divide = divide(x, y)
+import Add.addition
 
-    print(f"Addition: {result_add}")
-    print(f"Subtraction: {result_subtract}")
-    print(f"Multiplication: {result_multiply}")
-    print(f"Division: {result_divide}")
+#Accessing Variable, class, function
+print(f'Addition is {Add.addition.add(10,20)}')     #PackageName.moduleName.function_name()
+
+print()
+
+#===================================================================================================
+
+# from PackageName import moduleName
+print('---- from PackageName import moduleName ----')
+
+from Div import division
+
+#Accessing Variable, class, function
+# moduleName.function_name()
+print(f'Division is: {division.divide(10,2)}')
+
+print()
+
+#==================================================================================================
+# from PackageName.moduleName import function_name()
+
+print('----from PackageName.moduleName import function_name()----')
+
+from Mul import multiplication
+
+# Accessing Variable, class, function
+# function_name()
+print(f'Multiplication is: {multiplication.multiply(10,20)}')
 

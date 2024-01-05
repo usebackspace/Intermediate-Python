@@ -10,6 +10,5 @@ class MathOperations:
 # Using static methods without creating an instance
 sum_result = MathOperations()
 
-
 print(f'Sum is {sum_result.add(5,3)}')
 print(f"Product is: {MathOperations.multiply(4, 6)}")  # Output: Product: 24
