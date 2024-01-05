@@ -1,63 +1,24 @@
-class Car:
-    speed = 0
+class Bike:
+    price_hiked=0
 
-    def __init__(self, make, model, year):
-        self.make = make        # Instance variable
-        self.model = model
-        self.year = year 
+# When we use instance method changes reflect on current object
+    def increased_price(self,price):
+        self.price_hiked = price*0.2 +price
 
-    def accelerate(self, speed_increase):  # Instance Method
-        self.speed += speed_increase
+# When we use class method changes reflect on all object
+    # @classmethod
+    # def increased_price(cls,price):
+    #     cls.price_hiked = price*0.2 +price
 
-    def display_speed(self):
-        print(f"The current speed of the {self.year} {self.make} {self.model} is {self.speed} mph.")
 
-# Create an instance of the Car class
-my_car = Car(make="Toyota", model="Camry", year=2022)
-my_car1 = Car(make="Toyota", model="Camry", year=2022)
+apache= Bike()
+yamaha= Bike()
+ninja= Bike()
 
-# Using instance methods to interact with the car
-my_car.display_speed()
-my_car.accelerate(20)
-print(my_car.speed)
+apache.increased_price(10000)
 
-print()
-
-print(my_car1.speed)
-
-#==============================================================================================================
-
-print('----- Using Class Method -----')
-
-class Car:
-    speed = 0
-    def __init__(self, make, model, year):
-        self.make = make        # Instance variable
-        self.model = model
-        self.year = year
-
-    @classmethod
-    def accelerate(cls, speed_increase):  # Instance Method
-        cls.speed += speed_increase
-        # print(cls.speed)
-        #print(self.speed)           # 3 P of D
-
-    def display_speed(self):
-        print(f"The current speed of the {self.year} {self.make} {self.model} is {self.speed} mph.")
-
-# Create an instance of the Car class
-my_car = Car(make="Toyota", model="Camry", year=2022)
-my_car1 = Car(make="Ford", model="Mustang", year=2022)
-
-# Using instance methods to interact with the car
-my_car.display_speed()
-my_car.accelerate(20)
-
-print(my_car.speed)
-
-print('--- After Updating ----')
-my_car.display_speed()
-
-print(my_car1.speed)
+print(f'Hiked price of Apcahe: {apache.price_hiked}')
+print(f'Hiked price of Yahama" {yamaha.price_hiked}')
+print(f'Hiked price of Ninja: {ninja.price_hiked}')
 
 

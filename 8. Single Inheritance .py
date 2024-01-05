@@ -17,6 +17,8 @@ ch = Child()
 ch.child_property()
 ch.parent_property()
 
+print()
+
 # Creating an instance of the parent class ( Parent Class)
 parent=parent()
 parent.parent_property()

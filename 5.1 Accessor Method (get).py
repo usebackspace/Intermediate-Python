@@ -17,5 +17,5 @@ print(c.get_model())
 
 print()
 
-print(f' Meaker of Car is {c.make}')
-print(f' Model of Car is {c.model}')
+print(f'Maker of Car is {c.make}')
+print(f'Model of Car is {c.model}')

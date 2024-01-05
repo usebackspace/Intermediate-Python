@@ -1,21 +1,29 @@
 class Car:
     def __init__(self, make, model, year):
-        self.make = make        # Instance variable
+        self.make = make                        # Instance Attribute of a class
         self.model = model
         self.year = year
-        self.speed = 0
 
-    def accelerate(self, speed_increase):  # Instance Method
-        self.speed += speed_increase
+    def start(self):                           # Instance Method of a class
+        print(f"The {self.year} {self.make} {self.model} is starting.")
 
-
-    def display_speed(self):
-        print(f"The current speed of the {self.year} {self.make} {self.model} is {self.speed} mph.")
+    def display_info(self):
+        print(f"\nCar Information:\n"
+              f"Make: {self.make}\n"
+              f"Model: {self.model}\n"
+              f"Year: {self.year}\n")
 
 # Create an instance of the Car class
-my_car = Car(make="Toyota", model="Camry", year=2022)
+toyota = Car(make="Toyota", model="Camry", year=2022)
+tesla = Car(make="Tesla", model="Model S", year=2023)
 
-# Using instance methods to interact with the car
-my_car.display_speed()
-my_car.accelerate(20)
-my_car.display_speed()
+# Using methods to interact with the car
+print('---- Toyota Object----')
+toyota.display_info()
+toyota.start()
+
+
+
+print('---- Tesla Object ----')
+tesla.display_info()
+tesla.start()

@@ -1,6 +1,6 @@
 class Animal:
     def feed(self):
-        pass  # This is an abstract method
+        pass 
 
 class Lion(Animal):
     def feed(self):
@@ -22,9 +22,9 @@ lion = Lion()
 elephant = Elephant()
 bird = Bird()
 
-perform_feeding(lion)       # Output: Feeding meat to the lion
-perform_feeding(elephant)   # Output: Feeding plants to the elephant
-perform_feeding(bird)       # Output: Feeding seeds to the bird
+perform_feeding(lion)       #  Feeding meat to the lion
+perform_feeding(elephant)   #  Feeding plants to the elephant
+perform_feeding(bird)       #  Feeding seeds to the bird
 
 
 

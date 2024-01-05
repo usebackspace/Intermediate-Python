@@ -41,4 +41,4 @@ jaquar.start_engine()
 # jaquar.car_info()
 
 
-# When we pass parameter to the instance we have to pass through child class constructor
+# When we pass parameter to the instance of parent class we have to pass parameter through child class constructor
