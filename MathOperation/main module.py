@@ -32,4 +32,3 @@ from Mul import multiplication
 # Accessing Variable, class, function
 # function_name()
 print(f'Multiplication is: {multiplication.multiply(10,20)}')
-

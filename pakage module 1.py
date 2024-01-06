@@ -33,3 +33,9 @@ from MathOperation.Mul import multiplication
 # function_name()
 print(f'Multiplication is: {multiplication.multiply(10,20)}')
 
+print()
+
+print('---- from packageName.SubPackageName import * ----')
+
+from MathOperation.Add import *
+# x.marvel()

@@ -1,10 +1,16 @@
-# division.py
-def divide(x, y):
-    if y != 0:
-        return x / y
-    else:
-        return "Cannot divide by zero"
+# from package import *
 
+from Add import *
+print(addition.add(100,200))
+
+
+# If we try to access marvel function it will show error.
+# So we have add in __all__ special variable list
+
+# x.marvel()
+
+
+#===============================================================================================================
 
 # we will not get the output by normal execution method, we have to use flag in terminal.
 # we get all flag in python by command :-        python --help
