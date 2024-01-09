@@ -15,8 +15,6 @@ class Car(Vehicle):                 # Child class or Derived class or Sub Class
     def start_engine(self):
         print(f'Press Start Button to start the car')              
         
-    def honk(self):
-        print(f"Press honk button to honks loudly.")
 
 # Creating an instance of the Car class
 jaquar = Car()                
@@ -26,7 +24,7 @@ jaquar.start_engine()
 # jaquar.honk()
 # jaquar.car_info()
 
-# 1. If define class constructor in parent class and create a Instance of child class, class constructor of 
+# 1. If we define class constructor in parent class and create a Instance of child class, class constructor of 
 #    PARENT class get called automatically.
 
 # 2. If define class constructor in  both parent class and child class and create a Instance of child class,

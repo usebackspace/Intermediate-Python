@@ -55,7 +55,7 @@ class Vehicle:
 # Child class inheriting from parent class- Vehicle
 class Car(Vehicle):
     def __init__(self, brand, model, num_doors):
-        super().__init__(brand, model)         # Calling the constructor base class vehicle (parent class - Vehicle)
+        super().__init__(brand, model)      # Calling the constructor base class vehicle (parent class - Vehicle)
         self.num_doors = num_doors
 
     def display_info(self):

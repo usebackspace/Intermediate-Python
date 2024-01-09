@@ -27,8 +27,6 @@ class Car(Vehicle):                 # Child class or Derived class or Sub Class
     def start_engine(self):
         print(f'Press Start Button to start the car')              
         
-    def honk(self):
-        print(f"Press honk button to honks loudly.")
 
 # Creating an instance of the Car class
 jaquar = Car()                
