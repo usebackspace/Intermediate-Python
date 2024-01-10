@@ -23,7 +23,7 @@ class Car:
 
     def set_speed(self, speed):
         # Add any validation or logic here if needed
-        if self.__speed==0:
+        if speed>15:
             self.__speed = 50
 
 
@@ -35,9 +35,13 @@ print("Make:", my_car.get_make())
 my_car.set_make("Honda")  # Modifying make using setter
 print("Updated Make:", my_car.get_make())
 
+print()
+
 print("Model:", my_car.get_model())
 my_car.set_model("Accord")  # Modifying model using setter
 print("Updated Model:", my_car.get_model())
+
+print()
 
 print("Speed:", my_car.get_speed())
 my_car.set_speed(20)  # Modifying speed using setter

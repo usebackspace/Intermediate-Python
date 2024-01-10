@@ -13,21 +13,27 @@ class Car:
     def display_info(self):
         return self.__info()
 
-
+#==========================================================================================================
 # Create an instance of the Car class
 toyota = Car(make="Toyota", model="Camry", year=2022)
 
-# Using methods to interact with the car
+# Accessing start method having private variable
 toyota.start()
 
-# print(toyota.__model)  # Private variable
-
-# print(dir(toyota))
-print(toyota._Car__make)    # Name mangling
-
-# toyota.__info()
-
-toyota._Car__info()
-
-
+# Accessing Private Method and Private Variable using Public Method
 toyota.display_info()
+
+#==========================================================================================================
+# We try to access private method and private variable outside the class it will show an error
+
+# print(toyota.__model)  # Private variable
+# toyota.__info()        # Private method
+
+
+#==========================================================================================================
+# Accessing Private Method and Variable using Name Mangling
+# print(dir(toyota))
+
+# print(toyota._Car__make)    # Name mangling
+# toyota._Car__info()
+

@@ -15,6 +15,8 @@ class Car(Vehicle):
 car = Car("red", 4, 4)
 car.car_detail()  # Specific to Car
 
+print()
+
 # Accessing protected variable using object
 print('Before changing protected variable of wheel:',car._wheels)
 car._wheels=10         # Modifying protected value
