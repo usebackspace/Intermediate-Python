@@ -1,23 +1,15 @@
 class Parent:                                # Parent class or Base Class or Super Class
-    def __init__(self):
-        print("parent class Constructor")
 
     def parent_property(self):
         print('parent''s property')
 
 class Child(Parent):                          # Child class or Derived class or Sub Class
-    def __init__(self):
-        super().__init__()
-        print('Child class Constructor')
     
     def child_property(self):
         print('Child''s property')
 
 class GrandChild(Child):                         
-    def __init__(self):
-        super().__init__()
-        print('GrandChild class Constructor')
-    
+
     def grandchild_property(self):
         print('GrandChild''s property')
 
@@ -42,46 +34,32 @@ print()
 #========================================================================================================
 # Base class
 class Vehicle:
-    def __init__(self, brand, model):
+    def __init__(self, brand):
         self.brand = brand
-        self.model = model
-
-    def display_info(self):
-        print(f"Vehicle: {self.brand} {self.model}")
 
     def vehicle(self):
-        print(' This is a vehicle class constructor')
+        print(f"Vehicle: {self.brand}")
 
 # Child class inheriting from parent class- Vehicle
 class Car(Vehicle):
-    def __init__(self, brand, model, num_doors):
-        super().__init__(brand, model)      # Calling the constructor base class vehicle (parent class - Vehicle)
+    def __init__(self, brand, num_doors):
+        super().__init__(brand)      # Calling the constructor base class vehicle (parent class - Vehicle)
         self.num_doors = num_doors
 
-    def display_info(self):
-        super().display_info()        # Call the display_info method of the base class (parent class - Vehicle)
-        print(f"Doors: {self.num_doors}")
-
     def car(self):
-        print(' This is a car class constructor')
+        print(f"Doors: {self.num_doors}")
 
 # Grand Child inheriting from child class - Car
 class SportsCar(Car):
-    def __init__(self, brand, model, num_doors, top_speed):
-        super().__init__(brand, model, num_doors) # Calling the constructor of the immediate base class i.e (child class -Car)
+    def __init__(self, brand, num_doors, top_speed):
+        super().__init__(brand, num_doors) # Calling the constructor of the immediate base class i.e (child class -Car)
         self.top_speed = top_speed
 
-    def display_info(self):
-        super().display_info()  #Calling the constructor of the immediate base class i.e (child class -Car)
+    def sportscar(self):
         print(f"Top Speed: {self.top_speed} kph")
 
-    def sportscar(self):
-        print(' This is a sports car class constructor')
-
 # Create an instance of SportsCar
-sports_car = SportsCar(brand="McLaren", model="P1", num_doors=2, top_speed=350)
-
-sports_car.display_info()
+sports_car = SportsCar(brand="McLaren", num_doors=2, top_speed=350)
 
 # Accessing sportscar method
 sports_car.sportscar()

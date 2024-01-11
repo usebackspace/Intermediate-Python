@@ -1,22 +1,14 @@
 class Parent:                                # Parent class or Base Class or Super Class
-    def __init__(self):
-        print("parent class Constructor")
-
+    
     def parent_property(self):
         print('parent''s property')
 
 class Brother(Parent):                          # Child class or Derived class or Sub Class
-    def __init__(self):
-        super().__init__()
-        print('Child class Constructor')
     
     def brother_property(self):
         print('Child''s property')
 
 class Sister(Parent):                          # Child class or Derived class or Sub Class
-    def __init__(self):
-        super().__init__()
-        print('GrandChild class Constructor')
     
     def sister_property(self):
         print('GrandChild''s property')
@@ -44,36 +36,35 @@ print()
 #========================================================================================================
 
 class Vehicle:
-    def __init__(self, color, wheels):
+    def __init__(self, color):
         self.color = color
-        self.wheels = wheels
 
     def info(self):
         print("Vehicle Info.")
 
 class Car(Vehicle):
-    def __init__(self, color, wheels, doors):
-        super().__init__(color, wheels)
+    def __init__(self, color, doors):
+        super().__init__(color)
         self.doors = doors
 
     def car_detail(self):
-        print(f'Color of Car {self.color}, No. of Wheel {self.wheels}, No. of door {self.doors}')
+        print(f'Color of Car {self.color}, No. of door {self.doors}')
 
 class Truck(Vehicle):
-    def __init__(self, color, wheels, cargo):
-        super().__init__(color, wheels)
+    def __init__(self, color, cargo):
+        super().__init__(color)
         self.cargo = cargo
 
     def truck_detail(self):
-        print(f'Color of Car {self.color}, No. of Wheel {self.wheels}, Cargo Capacity {self.cargo}')
+        print(f'Color of Car {self.color}, Cargo Capacity {self.cargo}')
 
 # Creating objects and using methods
-car = Car("red", 4, 4)
+car = Car("red", 4)
 car.info()  # Inherited from Vehicle
 car.car_detail()  # Specific to Car
 
 print()
 
-truck = Truck("blue", 6, 1000)
+truck = Truck("blue", 1000)
 truck.info()  # Inherited from Vehicle
 truck.truck_detail()  # Specific to Truck
