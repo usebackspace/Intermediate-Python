@@ -12,7 +12,7 @@ print()
 #==================================================================================================
 
 # from PackageName import moduleName
-print('---- from PackageName import moduleName ----')
+print('---- from PackageName.SubPackageName import moduleName ----')
 
 from MathOperation.Div import division
 
@@ -27,11 +27,11 @@ print()
 
 print('----from PackageName.SubPackage.moduleName import function_name()----')
 
-from MathOperation.Mul import multiplication
+from MathOperation.Mul.multiplication import multiply
 
 # Accessing Variable, class, function
 # function_name()
-print(f'Multiplication is: {multiplication.multiply(10,20)}')
+print(f'Multiplication is: {multiply(10,20)}')
 
 print()
 

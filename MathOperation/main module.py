@@ -27,8 +27,8 @@ print()
 
 print('----from PackageName.moduleName import function_name()----')
 
-from Mul import multiplication
+from Mul.multiplication import multiply
 
 # Accessing Variable, class, function
 # function_name()
-print(f'Multiplication is: {multiplication.multiply(10,20)}')
+print(f'Multiplication is: {multiply(10,20)}')
